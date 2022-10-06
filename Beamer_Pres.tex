@@ -8,6 +8,7 @@
 \usepackage[export]{adjustbox}
 \usepackage{caption}
 \usepackage[skip=1ex, belowskip=2ex]{subcaption}
+\usepackage{hyperref}
 
 %% preamble
 %\usetheme{metropolis}
@@ -40,8 +41,7 @@
 			\\ \textcolor{ExecusharesGrey}{\footnotesize\hspace{1em}Transformação}
 			\\ \textcolor{ExecusharesGrey}{\footnotesize\hspace{1em}Exploração}
 			\\ \textcolor{ExecusharesGrey}{\footnotesize\hspace{1em}Resultados}
-		\item Demonstração Prática \\ \textcolor{ExecusharesGrey}{\footnotesize\hspace{1em} Some closing thoughts}
-		\item Conclusões
+		\item Demonstração Prática
 	\end{enumerate}
 \end{frame}
 	
@@ -155,10 +155,10 @@
 
 %% Análise exploratória
 \begin{frame}{Análise exploratória}
-\textbf{\large Como realizar uma Análise exploratória?}
+\textbf{\Large Como realizar uma Análise exploratória?}
 \vspace{0.2cm}
 \begin{enumerate}
-\item<2-> \alert<7>{Obtenção dos dados}
+\item<2-> Obtenção dos dados
 \item<3-> Processamento
 \item<4-> Transformação
 \item<5-> Exploração
@@ -168,7 +168,15 @@
 
 %% Obtenção dos dados
 \begin{frame}{Obtenção dos dados}
-
+\vspace{0.4cm}
+\begin{itemize}
+\item Os dados são relativos a APR-DRG (all-patient refined diagnosis-related groups) de Portugal, relativamente a pacientes com diagnostico de COVID-19
+\item Disponibilizados pelos SPMS /ACSS de Portugal, na plataforma de acesso restrito BI-MH
+\item Entradas de 4 de janeiro 2020 até saídas a 22 de junho de 2021
+\item 56 666 entradas/saídas hospitalares registadas (linhas), cada uma contendo 13 variáveis (colunas)
+\end{itemize}
+\vspace{0.4cm}
+Apesar da informação contida ser pseudo-anonimizada, por se tratarem de dados hospitalares, \alert{foi necessário a aprovação por um comité ético} a utilização dos dados.
 \end{frame}
 
 %% Processamento
@@ -178,11 +186,11 @@
  \begin{enumerate}
 \item Identificação das variáveis
 \item Alteração de designações
-\item Transformação de variáveis (ex: idade, grupos etários, LoS, etc.)
-\item Problema de representação
+\item Transformação de variáveis  \\ \vspace{-0.2cm} \textcolor{ExecusharesGrey}{\scriptsize \hspace{1em}(ex: idade, grupos etários, LoS, etc.)}
+\item Problema de representação \\ \vspace{-0.2cm} \textcolor{ExecusharesGrey}{\scriptsize \hspace{1em}(consideradas apenas entradas entre 1 de Março de 2020 e 31 de Março de 2021)}
 \item Remoção de variáveis sem interesse
 \end{enumerate}
-
+\vspace{-0.2cm}
 \begin{figure}[!ht]
     \centering
     \begin{subfigure}{0.40\textwidth}
@@ -349,5 +357,30 @@
 %	\end{column}
 %\end{columns}
 \end{frame}
+
+\begin{frame}{Demonstração Prática}
+
+\alert{\Large Convido todos os presentes a acompanharem a demonstração nos seus computadores.}
+\vspace{0.4cm}
+\centering
+
+A demonstração encontra-se disponível em :
+\vspace{0.2cm}
+\scriptsize{
+\url{https://github.com/Pereirajpf/XXX.git}
+}
+
+\vspace{0.4cm}
+
+, bem como os ficheiros desta apresentação em:
+\vspace{0.2cm}
+\tiny{
+\url{https://github.com/Pereirajpf/Thesis_Presentation_JPereira.git}
+}
+
+\includegraphics[width=0.2\textwidth]{Imagens/qrcode_apresentação.png}
+\end{frame}
+
+%%
 \end{document}
 
