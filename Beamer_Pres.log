@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.7) (preloaded format=xelatex 2022.10.4)  6 OCT 2022 18:17
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.7) (preloaded format=xelatex 2022.10.4)  6 OCT 2022 19:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1806,7 +1806,29 @@ File: Imagens/Dados_Transf_Perc.png Graphic file (type bmp)
 <Imagens/Dados_Transf_Perc.png>
  [15
 
-] [16
+]
+File: Imagens/violinBox_Type.jpeg Graphic file (type bmp)
+<Imagens/violinBox_Type.jpeg>
+
+Underfull \hbox (badness 10000) in paragraph at lines 249--249
+
+ []
+
+File: Imagens/PopVarPlot_fatalRate.jpeg Graphic file (type bmp)
+<Imagens/PopVarPlot_fatalRate.jpeg>
+
+Underfull \hbox (badness 10000) in paragraph at lines 249--249
+
+ []
+
+File: Imagens/histPlot_Discharge_month_Type_Death.jpeg Graphic file (type bmp)
+<Imagens/histPlot_Discharge_month_Type_Death.jpeg>
+
+Underfull \hbox (badness 10000) in paragraph at lines 249--249
+
+ []
+
+[16
 
 ] [17
 
@@ -1825,10 +1847,10 @@ Package rerunfilecheck Info: File `Beamer_Pres.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 30638 strings out of 410654
- 652521 string characters out of 2819750
+ 30663 strings out of 410654
+ 653462 string characters out of 2819750
  962919 words of memory out of 3000000
- 51029 multiletter control sequences out of 15000+600000
+ 51050 multiletter control sequences out of 15000+600000
  474931 words of font info for 130 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  128i,13n,126p,447b,855s stack positions out of 10000i,1000n,20000p,200000b,80000s
