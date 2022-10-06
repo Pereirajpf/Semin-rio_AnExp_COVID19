@@ -3,6 +3,12 @@
 {beamer}
 \mode<presentation>{}
 
+%Packages
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{caption}
+\usepackage[skip=1ex, belowskip=2ex]{subcaption}
+
 %% preamble
 %\usetheme{metropolis}
 \usepackage{blindtext}
@@ -28,12 +34,16 @@
 	\begin{enumerate}
 		\item Introdução
 			\\ \textcolor{ExecusharesGrey}{\footnotesize\hspace{1em }Modelos Epidemiológicos}
-		\item Como Realizar uma análise exploratória  \\ \textcolor{ExecusharesGrey}{\footnotesize\hspace{1em} Just some Lorem Ipsum for filler}
+		\item Análise Exploratória  
+			\\ \textcolor{ExecusharesGrey}{\footnotesize\hspace{1em}Obtenção dos dados}
+			\\ \textcolor{ExecusharesGrey}{\footnotesize\hspace{1em}Processamento}
+			\\ \textcolor{ExecusharesGrey}{\footnotesize\hspace{1em}Transformação}
+			\\ \textcolor{ExecusharesGrey}{\footnotesize\hspace{1em}Exploração}
+			\\ \textcolor{ExecusharesGrey}{\footnotesize\hspace{1em}Resultados}
 		\item Demonstração Prática \\ \textcolor{ExecusharesGrey}{\footnotesize\hspace{1em} Some closing thoughts}
 		\item Conclusões
 	\end{enumerate}
 \end{frame}
-	
 	
 %% Introdução
 \begin{frame}{Introdução}
@@ -48,7 +58,10 @@
 	\begin{column}[T]{0.35\textwidth}
 		\vspace{0.5cm}
 		\textcolor {green}{\Large\textbf{COVID-19 inCTRL}}\\
-		\textcolor{ExecusharesGrey}{\tiny\hspace{1em}Financiado pelo programa RESEARCH4COVID - FCT}
+		\vspace{-0.2cm}
+		\textcolor{ExecusharesGrey}{\tiny\hspace{1em}Financiado pelo programa:}\\
+		\vspace{-0.2cm}
+		\textcolor{ExecusharesGrey}{\tiny\hspace{1em}RESEARCH4COVID - FCT}\\
 		\vspace{0.5cm}
 		\includegraphics[width=\textwidth]{Imagens/logo_utad_completo_azul.png}\\
 		\vspace{0.3cm}
@@ -102,7 +115,7 @@
 \end{columns}
 \end{frame}
 
-%%
+%% COVID-19 inCTRL model
 \begin{frame}{Modelos Epidemiológicos}
 \begin{columns}
 	\begin{column}[T]{0.6\textwidth}
@@ -116,30 +129,109 @@
 	\end{column}
 	
 	\begin{column}[T]{0.4\textwidth}
-		\tiny
-		\begin{equation*}
+		\vspace{0.4cm}
+		\scalebox{0.6}{$
 		        \begin{aligned}
 		            S' &= -\lambda S,\\
 		            E'_t &= q \lambda S - \epsilon E_t\\
 		            I'_A &= p \epsilon E_{nt} + (1-c)p \epsilon E_t - r_a I_A\\
-		            I'_S &= (1-d)(1-p) \epsilon E_{nt} + (1-c)(1-p) \epsilon E_t - r_s I_S\\
+		            I'_S &= (1-d)(1-p) \epsilon E_{nt} + (1-c)(1-p) \epsilon E_t \\ & -  r_s I_S\\
 		            E'_{nt} &= (1-q) \lambda S - \epsilon E_{nt}\\
 		            I'_{Aq} &= c p \epsilon E_t - r_a I_{Aq}\\
 		            I'_{Sq} &= c(1-p) \epsilon E_t + d (1-p) \epsilon E_{nt} - r_s I_{Sq}\\
 		            H' &= \theta r_s (I_S + I_{Sq}) - \rho H\\
 		            H'_{icu} &= \pi \rho H - \omega H_{icu}\\
 		            M' &= \mu \omega H_{icu} + \tau \rho H\\
-		            R'_{obs} &= (1-\theta) r_s I_{Sq} + r_a I_{Aq} + (1-\pi-\tau)\rho H + (1-\mu)\omega H_{icu}\\
+		            R'_{obs} &= (1-\theta) r_s I_{Sq} + r_a I_{Aq} + (1-\pi-\tau)\rho H \\ & + (1-\mu)\omega H_{icu}\\
 		            R' &= (1-\theta) r_s I_S + r_a I_A
 		        \end{aligned}
-		\end{equation*}
-		%\vspace{0.5cm}
+		$}
+		\vspace{0.2cm}
 		\vfill
 		\includegraphics[width=\textwidth]{Imagens/inCTRL_Scenarios_ICU.jpg}\\
 	\end{column}
 \end{columns}
 \end{frame}
 
-	
+%% Análise exploratória
+\begin{frame}{Análise exploratória}
+\textbf{\large Como realizar uma Análise exploratória?}
+\vspace{0.2cm}
+\begin{enumerate}
+\item<2-> \alert<7>{Obtenção dos dados}
+\item<3-> Processamento
+\item<4-> Transformação
+\item<5-> Exploração
+\item<6-> Resultados
+\end{enumerate}
+\end{frame}
+
+%% Obtenção dos dados
+\begin{frame}{Obtenção dos dados}
+
+\end{frame}
+
+%% Processamento
+\begin{frame}{Processamento}
+\vspace{1cm}
+\textbf{Objetivo:} Transformar os dados originais para outros mais utilizáveis e verificar possíveis incongruências.
+ \begin{enumerate}
+\item Alteração de designações
+\item Transformação de variáveis (ex: idade, grupos etários, LoS, etc.)
+\item Problema de representação
+\item Remoção de variáveis sem interesse
+\end{enumerate}
+
+\begin{figure}[!ht]
+    \centering
+    \begin{subfigure}{0.40\textwidth}
+	\caption*{Dados Originais}
+	\vspace{-0.4cm}
+        \includegraphics[width=\textwidth, valign=m]{Imagens/Dados_Originais.png}
+    \end{subfigure}
+\qquad\tikz[baseline=-0.8\baselineskip]\draw[ultra thick,->] (0,0) -- ++ (0.5,0);\qquad
+    \begin{subfigure}{0.38\textwidth}
+    \caption*{Dados Processados}
+    \vspace{-0.4cm}
+    \includegraphics[width=\textwidth, valign=m]{Imagens/Dados_Processados.png}
+\end{subfigure}
+\end{figure}
+\end{frame}
+
+%%Transformação
+\begin{frame}{Transformação}
+\vspace{0.5cm}
+\textbf{Objetivo:} Transformar os dados noutros com nova informação.
+
+\begin{figure}[!ht]
+    \centering
+    \begin{subfigure}{0.40\textwidth}
+	\caption*{Dados Processados}
+        \includegraphics[width=\textwidth]{Imagens/Dados_Processados.png}
+    \end{subfigure}
+\qquad\tikz[baseline=-2cm]\draw[ultra thick,->] (0,0) -- ++ (0.5,0);\qquad
+    \begin{subfigure}{0.38\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Imagens/Dados_Transf_Stats.png}\\
+    \vspace{0.4cm}
+    \includegraphics[width=\textwidth]{Imagens/Dados_Transf_byDay.png}\\
+    \vspace{0.4cm}
+    \includegraphics[width=\textwidth]{Imagens/Dados_Transf_Perc.png}\\
+\end{subfigure}
+\end{figure}
+
+\end{frame}
+
+%% Exploração
+\begin{frame}{Exploração}
+\textbf{Objetivo:} Relacionar as diferentes variáveis de forma a encontrar relações de interesse.
+\end{frame}
+
+%% Resultados
+\begin{frame}{Resultados}
+\textbf{Objetivo:} Identificar que variáveis tem interesse para a questão em estudo.
+\end{frame}
+
+
 \end{document}
 
