@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.7) (preloaded format=xelatex 2022.10.4)  6 OCT 2022 19:18
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.7) (preloaded format=xelatex 2022.10.4)  6 OCT 2022 23:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1788,7 +1788,7 @@ LaTeX Font Info:    Font shape `TU/SourceSansPro(0)/b/n' will be
 
 ]
 LaTeX Font Info:    Font shape `TU/SourceSansPro(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 199.
+(Font)              scaled to size 10.0pt on input line 200.
 File: Imagens/Dados_Originais.png Graphic file (type bmp)
 <Imagens/Dados_Originais.png>
 File: Imagens/Dados_Processados.png Graphic file (type bmp)
@@ -1810,27 +1810,49 @@ File: Imagens/Dados_Transf_Perc.png Graphic file (type bmp)
 File: Imagens/violinBox_Type.jpeg Graphic file (type bmp)
 <Imagens/violinBox_Type.jpeg>
 
-Underfull \hbox (badness 10000) in paragraph at lines 249--249
+Underfull \hbox (badness 10000) in paragraph at lines 257--257
 
  []
 
 File: Imagens/PopVarPlot_fatalRate.jpeg Graphic file (type bmp)
 <Imagens/PopVarPlot_fatalRate.jpeg>
 
-Underfull \hbox (badness 10000) in paragraph at lines 249--249
+Underfull \hbox (badness 10000) in paragraph at lines 257--257
 
  []
 
 File: Imagens/histPlot_Discharge_month_Type_Death.jpeg Graphic file (type bmp)
 <Imagens/histPlot_Discharge_month_Type_Death.jpeg>
 
-Underfull \hbox (badness 10000) in paragraph at lines 249--249
+Underfull \hbox (badness 10000) in paragraph at lines 257--257
 
  []
 
 [16
 
-] [17
+]
+File: Imagens/byDayPlot_inHosp.jpeg Graphic file (type bmp)
+<Imagens/byDayPlot_inHosp.jpeg>
+File: Imagens/violinBox_Gender.jpeg Graphic file (type bmp)
+<Imagens/violinBox_Gender.jpeg>
+File: Imagens/PopVarPlot_PropICU.jpeg Graphic file (type bmp)
+<Imagens/PopVarPlot_PropICU.jpeg>
+File: Imagens/histPlot_Group_Type.jpeg Graphic file (type bmp)
+<Imagens/histPlot_Group_Type.jpeg>
+File: Imagens/violinBox_Region.jpeg Graphic file (type bmp)
+<Imagens/violinBox_Region.jpeg>
+File: Imagens/violinBox_Outcome.jpeg Graphic file (type bmp)
+<Imagens/violinBox_Outcome.jpeg>
+ [17
+
+]
+File: Imagens/Tabela_params.jpg Graphic file (type bmp)
+<Imagens/Tabela_params.jpg>
+File: Imagens/distFit_ICU.jpeg Graphic file (type bmp)
+<Imagens/distFit_ICU.jpeg>
+ [18
+
+] [19
 
 ]
 \tf@nav=\write6
@@ -1847,12 +1869,12 @@ Package rerunfilecheck Info: File `Beamer_Pres.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 30663 strings out of 410654
- 653462 string characters out of 2819750
+ 30748 strings out of 410654
+ 655964 string characters out of 2819750
  962919 words of memory out of 3000000
- 51050 multiletter control sequences out of 15000+600000
+ 51127 multiletter control sequences out of 15000+600000
  474931 words of font info for 130 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 128i,13n,126p,447b,855s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 128i,17n,126p,447b,855s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
-Output written on Beamer_Pres.pdf (17 pages).
+Output written on Beamer_Pres.pdf (19 pages).

@@ -176,6 +176,7 @@
 \vspace{1cm}
 \textbf{Objetivo:} Transformar os dados originais para outros mais utilizáveis e verificar possíveis incongruências.
  \begin{enumerate}
+\item Identificação das variáveis
 \item Alteração de designações
 \item Transformação de variáveis (ex: idade, grupos etários, LoS, etc.)
 \item Problema de representação
@@ -200,22 +201,29 @@
 
 %%Transformação
 \begin{frame}{Transformação}
-\vspace{0.5cm}
+\vspace{0.8cm}
 \textbf{Objetivo:} Transformar os dados noutros com nova informação.
 
 \begin{figure}[!ht]
     \centering
     \begin{subfigure}{0.40\textwidth}
 	\caption*{Dados Processados}
+	\vspace{-0.4cm}
         \includegraphics[width=\textwidth]{Imagens/Dados_Processados.png}
     \end{subfigure}
 \qquad\tikz[baseline=-2cm]\draw[ultra thick,->] (0,0) -- ++ (0.5,0);\qquad
     \begin{subfigure}{0.38\textwidth}
     \centering
+    \caption*{Tempo de permanência}
+    \vspace{-0.4cm}
     \includegraphics[width=\textwidth]{Imagens/Dados_Transf_Stats.png}\\
-    \vspace{0.4cm}
+    \vspace{0.2cm}
+    \caption*{Dados por dia}
+    \vspace{-0.4cm}
     \includegraphics[width=\textwidth]{Imagens/Dados_Transf_byDay.png}\\
-    \vspace{0.4cm}
+    \vspace{0.2cm}
+    \caption*{Parâmetros em relação a variáveis}
+    \vspace{-0.4cm}
     \includegraphics[width=\textwidth]{Imagens/Dados_Transf_Perc.png}\\
 \end{subfigure}
 \end{figure}
@@ -248,11 +256,98 @@
 \end{figure}
 \end{frame}
 
-%% Resultados
-\begin{frame}{Resultados}
-\textbf{Objetivo:} Identificar que variáveis e relações tem interesse para a questão em estudo.
+%% Exploração
+\begin{frame}{Exploração}
+\vspace{0.4cm}
+\alert{\large Variáveis a comparar}
+\begin{figure}
+\centering
+\begin{subfigure}{0.3\textwidth}
+\caption*{Tipo de hospitalização (com e sem UCI)}
+\vspace{-0.4cm}
+\includegraphics[width=\textwidth]{Imagens/byDayPlot_inHosp.jpeg}
+\end{subfigure}
+\begin{subfigure}{0.3\textwidth}
+\caption*{Género}
+\vspace{-0.4cm}
+\includegraphics[width=\textwidth]{Imagens/violinBox_Gender.jpeg}
+\end{subfigure}
+\begin{subfigure}{0.3\textwidth}
+\caption*{Tempo}
+\vspace{-0.4cm}
+\includegraphics[width=\textwidth]{Imagens/PopVarPlot_PropICU.jpeg}
+\end{subfigure}
+\begin{subfigure}{0.3\textwidth}
+\caption*{Grupo etário}
+\vspace{-0.4cm}
+\includegraphics[width=\textwidth]{Imagens/histPlot_Group_Type.jpeg}
+\end{subfigure}
+\begin{subfigure}{0.3\textwidth}
+\caption*{Região}
+\vspace{-0.4cm}
+\includegraphics[width=\textwidth]{Imagens/violinBox_Region.jpeg}
+\end{subfigure}
+\begin{subfigure}{0.3\textwidth}
+\caption*{Resultado da hospitalização}
+\vspace{-0.4cm}
+\includegraphics[width=\textwidth]{Imagens/violinBox_Outcome.jpeg}
+\end{subfigure}
+\end{figure}
 
 \end{frame}
 
+%% Resultados
+\begin{frame}{Resultados}
+\vspace{0.4cm}
+\textbf{Objetivo:} Identificar variáveis e relações de interesse para a questão em estudo.
+
+\begin{columns}
+	\begin{column}[T]{0.65\textwidth}
+	\scalebox{0.45}{$
+		\begin{aligned}
+            		\text{Proporção de pacientes UCI} &= \frac{\text{entradas UCI}}{\text{Total entradas}} \times 100\% = 10.92\% \\
+            		\\
+		            \text{Mortalidade de pacientes ICU} &= \frac{\text{fatalidades não-UCI}}{\text{entradas não-UCI}} \times 100\% = 22.60\% \\
+		            \\
+		            \text{Mortalidade de pacientes não-UCI} &= \frac{\text{fatalidades UCI}}{\text{entradas UCI}} \times 100\% = 32.84\%
+        		\end{aligned}
+	$}
+	\vspace{0.2cm}
+	\begin{figure}
+		\caption*{\small Parâmetros de interesse, em relação a várias variáveis}
+		\vspace{-0.2cm}
+		\includegraphics[width=0.8\textwidth]{Imagens/Tabela_params.jpg}
+	\end{figure}
+	\end{column}
+	
+	\begin{column}[T]{0.35\textwidth}
+	\begin{figure}
+		\caption*{\small Ajuste a distribuições estatísticas}
+		\vspace{-0.2cm}
+		\includegraphics[width=\textwidth]{Imagens/distFit_ICU.jpeg}
+	\end{figure}
+	\end{column}
+\end{columns}
+\end{frame}
+
+%% Resultados 2
+\begin{frame}{Resultados}
+%\begin{columns}
+%	\begin{column}[T]{0.65\textwidth}
+		\textbf{Permitindo tirar as seguintes conclusões de maior interesse:}
+		\vspace{0.5cm}
+		\begin{itemize}
+			\item Pacientes UCI passam mais tempo em hospital, independentemente do resultado
+			\item Idade condiciona taxa de hospitalização, tempo de permanência, entre outros
+			\item Homens são mais hospitalizados em UCI, mas tem igual tempo de permanecia e taxa de mortalidade
+			\item Percentagem pacientes UCI e taxa de mortalidade variaram ao longo do tempo
+		\end{itemize}
+%	\end{column}
+	
+%	\begin{column}[T]{0.35\textwidth}
+	
+%	\end{column}
+%\end{columns}
+\end{frame}
 \end{document}
 
